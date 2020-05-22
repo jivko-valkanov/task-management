@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="jivko">
+    <meta name="description" content="task management web software">
+
+    <title>Page</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap/bootstrap.min.css" th:href="@{/css/bootstrap/bootstrap.min.css}" rel="stylesheet">
+    <link href="/css/custom.css" th:href="@{/css/custom.css}" rel="stylesheet" >
+    <!--Font Awesome (icon set)-->
+    <script src="https://kit.fontawesome.com/7c096101d3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav th:replace="~{shared_/fragments/top_navigation :: standard_navigation}"></nav>
+
+<!-- Page Content -->
+<div class="container mt-5">
+    <div class="row">
+        <div th:replace="~{shared_/fragments/left_side_navigation}"></div>
+        <div class="col-md-8 text-left" layout:fragment="content"></div>
+    </div>
+</div>
+
+</body>
+<!-- Bootstrap core JavaScript -->
+<script src="/js/jquery/jquery.min.js" th:href="@{/js/jquery/jquery.min.js}"></script>
+<script src="/js/bootstrap/bootstrap.min.js" th:href="@{/js/bootstrap/bootstrap.min.js}"></script>
+</html>

@@ -1,0 +1,32 @@
+body{
+    background-color: #f5f5f5;
+}
+.card{
+    border: none;
+    border-radius: none;
+}
+#accordion{
+    border: solid 1px #0000001c;
+}
+.btn-sign-up, .btn-log-in{
+    width: 100%;
+}
+.log-in-form{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 11px;
+}
+@media (max-width: 768px) {
+
+    .navbar-nav {
+      display:inherit
+    }
+    .nav-item{
+        display: inline-block;
+        width: 23%;
+        text-align: center;
+    }
+    .nav-pills .nav-link {
+        text-align: center;
+    }
+}

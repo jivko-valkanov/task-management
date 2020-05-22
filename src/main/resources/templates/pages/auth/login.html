@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{shared_/layouts/login-registration-layout}" >
+
+<div class="container mt-5" layout:fragment="content">
+    <form method="POST" enctype="multipart/form-data" class="log-in-form p-5">
+        <h2 class="text-center mb-5">Log in</h2>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-log-in btn-primary">Log in</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</html>
