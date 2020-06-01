@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav th:fragment="standard_navigation" class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Task Management</a>
+        <a class="navbar-brand" href="#" th:href="@{/}">Task Management</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,7 @@
                     <a class="nav-link" href="#"><i class="fas fa-plus fa-2x"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-bell fa-2x"></i></a>
+                    <a class="nav-link" th:href="@{/notifications}" href="#"><i class="fas fa-bell fa-2x"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-cog fa-2x"></i></a>

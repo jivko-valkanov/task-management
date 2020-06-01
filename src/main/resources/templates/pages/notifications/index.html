@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{shared_/layouts/main-layout}" >
+
+<div layout:fragment="content">
+   <h2>Notifications</h2>
+   <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center"
+          th:if="${notifications!=null and !notifications.isEmpty()}"
+          th:each="notification : ${notifications}"
+          th:inline='text'>
+         [[${notification}]]
+         <span class="badge badge-primary badge-pill">new</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center"
+          th:unless="${notifications!=null and !notifications.isEmpty()}">
+         No notifications
+      </li>
+   </ul>
+</div>
+
+</html>

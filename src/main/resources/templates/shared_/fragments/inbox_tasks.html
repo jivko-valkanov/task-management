@@ -1,33 +1,24 @@
 <!-- INBOX TASKS -->
-<div th:fragment="inbox_tasks" class="tab-content" id="v-pills-tabContent">
-    <div class="tab-pane fade show active">
+<div th:fragment="inbox_tasks" class="tab-content">
+    <div class="fade show active">
         <div class="card">
-            <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <div class="card-header">
                 <h5 class="mb-0">
-                    <button class="btn">
-                        <h3>Today</h3><span>Mon, 01.05</span>
-                    </button>
+                    <h3>Inbox tasks</h3>
                 </h5>
             </div>
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div id="collapseOne" class="collapse show">
                 <div class="card-body">
-
-                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                    <div class="custom-control custom-checkbox my-1 mr-sm-2"
+                    th:if="${inboxTasks}"
+                    th:each="task : ${inboxTasks}">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                            <input type="checkbox" class="custom-control-input">
+                            <label class="custom-control-label" th:text="${task}">Check this custom checkbox</label>
                             <a href="#" class="badge badge-primary float-right">Primary</a>
                         </div>
                     </div>
-                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck2">
-                            <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
-                            <a href="#" class="badge badge-secondary float-right">Secondary</a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
