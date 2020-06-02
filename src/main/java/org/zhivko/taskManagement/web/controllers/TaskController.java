@@ -9,12 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class HomeController extends BaseController {
+public class TaskController extends BaseController {
 
-    public HomeController() {
+    public TaskController() {
+        //
     }
 
-    @GetMapping(value = {"/","/inbox"})
+    @GetMapping(value = {"/inbox"})
     public ModelAndView indexView(ModelAndView modelAndView) {
         modelAndView.setViewName("pages/index");
         List<String> inboxTasks = new ArrayList<>();

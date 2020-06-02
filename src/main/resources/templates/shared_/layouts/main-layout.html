@@ -27,10 +27,12 @@
         <div th:replace="~{shared_/fragments/left_side_navigation}"></div>
         <div class="col-md-8 text-left" layout:fragment="content"></div>
     </div>
+    <div th:replace="~{shared_/fragments/task_modal}"></div>
 </div>
 
 </body>
 <!-- Bootstrap core JavaScript -->
 <script src="/js/jquery/jquery.min.js" th:href="@{/js/jquery/jquery.min.js}"></script>
 <script src="/js/bootstrap/bootstrap.min.js" th:href="@{/js/bootstrap/bootstrap.min.js}"></script>
+<script src="/js/custom.js" th:href="@{/js/custom.js}"></script>
 </html>
