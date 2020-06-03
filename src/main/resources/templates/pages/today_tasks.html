@@ -4,7 +4,9 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{shared_/layouts/main-layout}" >
-
+<head>
+   <title>Today</title>
+</head>
 <div layout:fragment="content">
    <div th:replace="~{shared_/fragments/today_tasks}"></div>
 </div>

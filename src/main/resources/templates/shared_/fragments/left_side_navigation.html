@@ -3,20 +3,17 @@
     <div class="nav flex-column nav-pills" aria-orientation="vertical">
         <a class="nav-link"
            th:href="@{/inbox}"
-           th:classappend="${#httpServletRequest.getRequestURI() == '/inbox'} ? 'active':''"
-           aria-selected="true">
+           th:classappend="${#httpServletRequest.getRequestURI() == '/inbox'} ? 'active':''">
             <i class="fas fa-inbox"></i> Inbox <span class="badge">(0)</span>
         </a>
         <a class="nav-link"
            th:href="@{/today}"
-           th:classappend="${#httpServletRequest.getRequestURI() == '/today'} ? 'active':''"
-           aria-selected="false">
+           th:classappend="${#httpServletRequest.getRequestURI() == '/today'} ? 'active':''">
             <i class="fas fa-calendar-day"></i> Today <span class="badge">(0)</span>
         </a>
         <a class="nav-link"
            th:href="@{/future}"
-           th:classappend="${#httpServletRequest.getRequestURI() == '/future'} ? 'active':''"
-           aria-selected="false">
+           th:classappend="${#httpServletRequest.getRequestURI() == '/future'} ? 'active':''">
             <i class="fas fa-calendar-alt"></i> Next 7 days <span class="badge">(0)</span>
         </a>
     </div>

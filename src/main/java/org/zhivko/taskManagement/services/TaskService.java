@@ -1,8 +1,12 @@
 package org.zhivko.taskManagement.services;
 
+import org.zhivko.taskManagement.web.models.TaskDto;
+
+import java.util.List;
+
 public interface TaskService {
 
-    public void getInboxTasks();
+    public List<TaskDto> getInboxTasks();
 
     public void getDailyTasks();
 

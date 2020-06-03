@@ -2,6 +2,7 @@ package org.zhivko.taskManagement.web.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.zhivko.taskManagement.web.controllers.base.BaseController;
 
@@ -39,5 +40,17 @@ public class TaskController extends BaseController {
     public ModelAndView nextSevenDaysView(ModelAndView modelAndView) {
         modelAndView.setViewName("pages/future_tasks");
         return modelAndView;
+    }
+
+    @GetMapping("/task/create")
+    public ModelAndView createTaskView(ModelAndView modelAndView) {
+        modelAndView.setViewName("pages/task/create_task");
+        return modelAndView;
+    }
+
+    @PostMapping("/task/create")
+    public String createTaskPost() {
+        //
+        return super.redirect("/");
     }
 }

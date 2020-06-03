@@ -9,19 +9,17 @@
         </button>
         <div class="collapse navbar-collapse pull-right">
             <ul class="navbar-nav ml-auto">
-                <!--<li class="nav-item active">-->
-                    <!--<a class="nav-link" href="#"><i class="fas fa-home fa-2x"></i>-->
-                        <!--<span class="sr-only">(current)</span>-->
-                    <!--</a>-->
-                <!--</li>-->
                 <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Add a task">
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#taskModal"><i class="fas fa-plus fa-2x"></i></a>
+                    <a class="nav-link" th:href="@{/task/create}" href="#"><i class="fas fa-plus fa-2x"></i></a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Notifications">
                     <a class="nav-link" th:href="@{/notifications}" href="#"><i class="fas fa-bell fa-2x"></i></a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Settings">
                     <a class="nav-link" href="#"><i class="fas fa-cog fa-2x"></i></a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Logout">
+                    <a class="nav-link" th:href="@{/auth/login}"><i class="fas fa-sign-out-alt fa-2x"></i></a>
                 </li>
             </ul>
         </div>
